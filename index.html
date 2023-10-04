@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Pizza Palace</h1>
+        <p>Order your favorite pizza online!</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section>
+            <h2>Order Your Pizza</h2>
+            <form action="order-processing.php" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="address">Delivery Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pizza Details</legend>
+                    <label for="pizzas">Number of Pizzas:</label>
+                    <input type="number" id="pizzas" name="pizzas" min="1" required><br>
+
+                    <label for="size">Size:</label>
+                    <select id="size" name="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select><br>
+
+                    <label for="shape">Shape:</label><br>
+                    <input type="radio" id="round" name="shape" value="round" checked>
+                    <label for="round">Round</label><br>
+                    <input type="radio" id="square" name="shape" value="square">
+                    <label for="square">Square</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Toppings</legend>
+                    <label for="toppings">Toppings (comma-separated):</label>
+                    <input type="text" id="toppings" name="toppings"><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Crust Type</legend>
+                    <input type="radio" id="deep-dish" name="crust" value="deep-dish">
+                    <label for="deep-dish">Deep Dish</label><br>
+                    <input type="radio" id="thin-crust" name="crust" value="thin-crust" checked>
+                    <label for="thin-crust">Thin Crust</label><br>
+                    <input type="radio" id="other-crust" name="crust" value="other-crust">
+                    <label for="other-crust">Other</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Type</legend>
+                    <input type="radio" id="takeout" name="order-type" value="takeout">
+                    <label for="takeout">Take Out</label><br>
+                    <input type="radio" id="delivery" name="order-type" value="delivery">
+                    <label for="delivery">Delivery</label><br>
+                    <input type="radio" id="eat-in" name="order-type" value="eat-in">
+                    <label for="eat-in">Eat In</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Special Requests</legend>
+                    <label for="requests">Additional Requests:</label><br>
+                    <textarea id="requests" name="requests" rows="4" cols="50"></textarea><br>
+                </fieldset>
+                
+                <input type="submit" value="Place Order">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+
+        <!-- Image Section -->
+        <section>
+            <h2>Our Delicious Pizza</h2>
+            <p>Check out our mouthwatering pizza below:</p>
+            <img src="assets/pizza-stock.jpg" alt="Delicious Pizza">
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Pizza Palace</p>
+    </footer>
+</body>
+</html>
